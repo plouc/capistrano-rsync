@@ -138,6 +138,7 @@ namespace :rsync do
         execute :git,
           :clone,
           '--quiet',
+          '--mirror',
           fetch(:repo_url),
           fetch(:rsync_stage),
           "#{git_depth.call}",
